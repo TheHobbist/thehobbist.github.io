@@ -1,5 +1,7 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
+
 <html>
+
 <head>
 	<title>thehobbist.github.io</title>
 	<style>
@@ -57,33 +59,108 @@
 	.button:hover {
 	  background-color: #3e8e41;
 	}
+	.navbar {
+	  overflow: hidden;
+	  background-color: #333;
+	  position: fixed; /* Set the navbar to fixed position */
+	  top: 0; /* Position the navbar at the top of the page */
+	  width: 100%; /* Full width */
+	}
+
+	/* Links inside the navbar */
+	.navbar a {
+	  float: left;
+	  display: block;
+	  color: #f2f2f2;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	}
+
+	/* Change background on mouse-over */
+	.navbar a:hover {
+	  background: #ddd;
+	  color: black;
+	}
+
+	/* Main content */
+	.main {
+	  margin-top: 50px; /* Add a top margin to avoid content overlay */
+	}
+	
+	/* Create two columns/boxes that floats next to each other */
+	nav {
+	  float: left;
+	  width: 30%;
+	  height: 300px; /* only for demonstration, should be removed */
+	  background: #ccc;
+	  padding: 20px;
+	}
+
+	/* Style the list inside the menu */
+	nav ul {
+	  list-style-type: none;
+	  padding: 0;
+	}
+
+	article {
+	  float: left;
+	  padding: 20px;
+	  width: 70%;
+	  background-color: #f1f1f1;
+	  height: 300px; /* only for demonstration, should be removed */
+	}
+	/* Clear floats after the columns */
+	section::after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+	/* Style the footer */
+	footer {
+	  background-color: #777;
+	  padding: 10px;
+	  text-align: center;
+	  color: white;
+	}
+
+	/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+	@media (max-width: 600px) {
+	  nav, article {
+		width: 100%;
+		height: auto;
+	  }
+	}
 	</style>
 </head>
-<body>
-<h1 href="index.html" open>TheHobbist</h1>
-<div class="dropdown">
-  <button class="dropbtn">Projektek</button>
-  <div class="dropdown-content">
-    <a href="solar.html">Solar</a>
-    <a href="horseblood.html">Horseblood</a>
-  </div>
-</div>
-<table>
-    <tr>
-        <th>Verzió</th>
-		<td>Dátum</td>
-        <th>Letöltés</th>
-    </tr>
-    <tr>
-        <td>V1.0.2</td>
-		<td>2023.07.11.</td>
-        <td><a href="Horseblood/20230711/HorseInstall.zip" download>V1.0.2 letöltése</a></td>
-    </tr>
-	<tr>
-        <td>V1.0.4</td>
-		<td>2023.07.12.</td>
-        <td><a href="Horseblood/20230712/HorseInstall.zip" download>V1.0.4 letöltése</a></td>
-    </tr>
-</table>
-</body>
+	<body>
+		<div class="navbar">
+		  <a href="index.html">Kezdőlap</a>
+		  <a href="horseblood.html">Horseblood</a>
+		  <a href="solarkft.html">Solar Kft.</a>
+		  <a href="contact.html">Kapcsolat</a>
+		</div>
+		<div class="main">
+			<h2>Horseblood</h2>
+			<h3>Asztali (Windows) program</h2>
+			<table>
+				<tr>
+					<th>Verzió</th>
+					<td>Dátum</td>
+					<th>Letöltés</th>
+				</tr>
+				<tr>
+					<td>V1.0.2</td>
+					<td>2023.07.11.</td>
+					<td><a href="Horseblood/20230711/HorseInstall.zip" download>V1.0.2 letöltése</a></td>
+				</tr>
+				<tr>
+					<td>V1.0.4</td>
+					<td>2023.07.12.</td>
+					<td><a href="Horseblood/20230712/HorseInstall.zip" download>V1.0.4 letöltése</a></td>
+				</tr>
+			</table>
+		</div>
+	</body>
 </html>
